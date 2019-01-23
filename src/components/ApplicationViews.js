@@ -87,13 +87,23 @@ export default class ApplicationViews extends Component {
                     component={Login} />
 
                 <Route exact path="/" render={(props) => {
-                    return <LocationList 
+                    if (this.isAuthenticated()){
+                        return <LocationList 
                         locations={this.state.locations} />
+                    }else{
+                        return <Redirect to="/login" />
+                    }
+
                 }} />
                 <Route exact path="/animals" render={(props) => {
-                    return <AnimalList {...props}
+                    if (this.isAuthenticated()){
+                        return <AnimalList {...props}
                         deleteAnimal={this.deleteAnimal}
                         animals={this.state.animals} />
+                    }else{
+                        return <Redirect to="/login" />
+                    }
+
                 }} />
                 <Route path="/animals/:animalId(\d+)" render={(props) => {
                     return <AnimalDetail {...props} 
@@ -119,8 +129,13 @@ export default class ApplicationViews extends Component {
                         employees={this.state.employees} />
                 }} />
                 <Route exact path="/owners" render={(props) => {
-                    return <OwnerList 
+                    if(this.isAuthenticated()){
+                        return <OwnerList 
                         owners={this.state.owners} />
+                    }else{
+                        return <Redirect to="/login" />
+                    }
+
                 }} />
                 <Route path="/owners/:ownerId(\d+)" render={(props) => {
                     return <OwnerDetail {...props} 
