@@ -1,0 +1,60 @@
+{
+  "employees": [
+    {
+      "id": 6,
+      "name": "Roe CeBlanc",
+      "occupation": "Artist"
+    },
+    {
+      "id": 9,
+      "name": "Goe SeBlanc",
+      "occupation": "Artist"
+    }
+  ],
+  "animals": [
+    {
+      "id": 5,
+      "name": "Jordan",
+      "breed": "Mut"
+    },
+    {
+      "id": 6,
+      "name": "Jordan",
+      "breed": "Mut"
+    }
+  ],
+  "owners": [
+    {
+      "id": 6,
+      "name": "Emily",
+      "profession": "dog fighting"
+    },
+    {
+      "id": 10,
+      "name": "Asia",
+      "profession": "dog fighting"
+    },
+    {
+      "id": 11,
+      "name": "Emily",
+      "profession": "dog fighting"
+    },
+    {
+      "id": 12,
+      "name": "Andy Cauliflower",
+      "profession": "dog fighting"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "500 Circle Way"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "10101 Binary Court"
+    }
+  ]
+}
