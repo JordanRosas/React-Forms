@@ -14,5 +14,14 @@ export default {
     .then(e => e.json())
     .then(() => fetch(`${remoteURL}/owners`))
     .then(e => e.json())
+  },
+  post(newOwner) {
+    return fetch(`${remoteURL}/owners`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newOwner)
+    }).then(data => data.json())
   }
 }
